@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.score-container:after {
+  content: "점수"; }
+
+.best-container:after {
+  content: "최고점수"; } 
+</style>
+  <meta charset="utf-8">
+  <title>2048</title>
+
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<div class="languagepicker">
+<div class="html1"><a href="index.html">English</a></div>
+<div class="html2"><a href="index_ch.html">中文</a></div>
+<div class="html3"><a href="index_ko.html">한국의</a></div>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">숫자 놀이에 참여하여 <strong>2048 타일</strong>을 달성하세요!</p>
+      <a class="restart-button">게임 새로하기</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">계속 하기</a>
+          <a class="retry-button">다시 하기</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">게임 방법:</strong> 당신의 <strong>화살표 키보드</strong>를 사용하여 타일을 움직이세요. 같은 숫자를 지닌 두개의 타일이 만나게 되면<strong> 하나로 합쳐집니다!</strong>
+    </p>
+    <hr>
+    <p>
+    <strong class="important">주의사항:</strong> 이 웹사이트는 2048의 공식 홈페이지 입니다. 다음 링크를 통해 휴대폰으로도 게임하실 수 있습니다. <a href="http://git.io/2048">http://git.io/2048.</a> 이 외의 다른 어플 혹은 사이트는 파생된 것이거나 모조이므로 조심해서 사용하세요.
+    </p>
+    <hr>
+    <p>
+    <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli</a>로부터 만들어짐. <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 의 Veewo Studio</a>에 기초하며 <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer</a>와 개념상 아주 유사함.
+    </p>
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+</body>
+</html>
